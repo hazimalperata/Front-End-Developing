@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*.option {*/
+/*    background-color: red;*/
+/*}*/
+
+/*input[type="radio"]:checked + div {*/
+/*    border: 1px solid blue !important;*/
+/*}*/
+
+.option input[type="radio"]:checked + label {
+    background-color: red;
+    color: white;
+}
