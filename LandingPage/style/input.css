@@ -13,3 +13,54 @@
     padding: 12px 8px;
     letter-spacing: 0.5px;
 }
+
+.slider-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+    transition: all .2s;
+    margin-top: 4px;
+
+}
+
+.tick-list {
+    position: relative;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 32px;
+
+    & li:not(:last-child) {
+        margin: 8px 0;
+    }
+
+    & li:before {
+        content: url("../assets/icons/check.svg");
+        position: absolute;
+        left: 0;
+    }
+}
+
+.footer {
+    .footer-upper-area {
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+
+            > div,
+            > a {
+                padding: 12px 0;
+            }
+
+            & div {
+                font-weight: 500;
+                color: white;
+            }
+
+            & a {
+                color: #E2E8F0; /* BLUE GRAY 200 */
+            }
+        }
+    }
+}
