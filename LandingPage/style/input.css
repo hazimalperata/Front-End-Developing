@@ -12,9 +12,13 @@
 .nav-item {
     padding: 12px 8px;
     letter-spacing: 0.5px;
+
+    &.hamburger {
+        margin-right: auto;
+    }
 }
 
-.slider-item{
+.slider-item {
     display: flex;
     flex-direction: row;
     align-items: center;

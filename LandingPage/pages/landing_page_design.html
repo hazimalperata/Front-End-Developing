@@ -2,28 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Landing Page</title>
+  <title>COLLERS</title>
   <link href="../style/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="../js/splide/css/splide-core.min.css">
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-  />
+  <link rel="stylesheet" href="../thirdParty/swiper-bundle.min.css">
 </head>
 <body class="overflow-x-hidden" style="background: fixed linear-gradient(180deg, #FFFBEB 0%, #FFF 89.63%)">
-<div class="hidden inset-0 fixed z-2" id="pointerCloser" onclick="outerClick(event)"></div>
-<div id="hamburgerMenu" class="fixed inset-0 bg-red-300 flex flex-col gap-4 p-5 translate-x-full z-20 transition-all duration-300">
+<div class="hidden inset-0 fixed z-2" id="pointerCloser" onclick="outerClick()"></div>
+<div id="hamburgerMenu"
+     class="fixed inset-0 bg-amber-200 flex flex-col gap-4 py-6 px-20 translate-x-full z-20 transition-all duration-300 text-amber-900 h-screen">
   <div class="flex flex-row items-center justify-between">
     <a href="#" class="text-32 font-semibold">Collers</a>
-    <div onclick="hamburgerMenuHandler()">x</div>
+    <img src="../assets/icons/close.svg" onclick="hamburgerMenuHandler()" class="cursor-pointer select-none"
+         alt="close_icon">
   </div>
+  <a href="#" class="nav-item hamburger">Products</a>
+  <a href="#" class="nav-item hamburger">Solutions</a>
+  <a href="#" class="nav-item hamburger">Pricing</a>
+  <a href="#" class="nav-item hamburger">Resources</a>
+  <a href="#" class="nav-item hamburger">Log In</a>
+  <a href="#" class="py-2.5 px-[26px] rounded-lg border-2 border-amber-900 font-medium mr-auto">Sign up now</a>
+  <img src="../assets/images/landing_shoe.png" class="w-full h-auto m-auto object-cover" alt="golden_shoe">
 
-  <a href="#" class="nav-item">Products</a>
-  <a href="#" class="nav-item">Solutions</a>
-  <a href="#" class="nav-item">Pricing</a>
-  <a href="#" class="nav-item">Resources</a>
-  <a href="#" class="nav-item">Log In</a>
-  <a href="#" class="py-2.5 px-[26px] rounded-lg border-2 border-amber-900 font-medium">Sign up now</a>
 </div>
 <div class="flex flex-col">
   <nav class="w-full flex flex-row justify-between py-6 px-4 md:px-20 text-amber-900">
@@ -36,7 +35,8 @@
       <a href="#" class="nav-item">Log In</a>
       <a href="#" class="py-2.5 px-[26px] rounded-lg border-2 border-amber-900 font-medium">Sign up now</a>
     </div>
-    <img class="lg:hidden cursor-pointer" onclick="hamburgerMenuHandler()" src="../assets/icons/menu-scale.svg" alt="menu_icon">
+    <img class="lg:hidden cursor-pointer" onclick="hamburgerMenuHandler()" src="../assets/icons/menu-scale.svg"
+         alt="menu_icon">
   </nav>
   <div class="flex flex-col lg:flex-row items-center gap-20 p-4 md:p-20">
     <div class="flex flex-col text-center lg:text-left gap-8 text-blue-gray-900">
@@ -112,7 +112,7 @@
           </a>
         </div>
         <div
-          class="absolute opacity-75 bg-pink-700 rounded-[50px] w-[271px] h-[271px] bottom-[25px] left-[-35px]"></div>
+          class="absolute opacity-75 bg-pink-700 rounded-50 w-[271px] h-[271px] bottom-[25px] left-[-35px]"></div>
       </div>
       <div
         class="relative flex flex-col bg-blue-gray-900 border border-blue-gray-900 rounded-[10px] shadow-light-2xl">
@@ -127,9 +127,9 @@
           </a>
         </div>
         <div
-          class="absolute opacity-75 bg-blue-light-700 rounded-[50px] w-[161px] h-[161px] top-[-31px] left-[-21px]"></div>
+          class="absolute opacity-75 bg-blue-light-700 rounded-50 w-[161px] h-[161px] top-[-31px] left-[-21px]"></div>
         <div
-          class="absolute opacity-75 bg-amber-700 rounded-[50px] w-[130px] h-[130px] bottom-[48px] right-[-14px]"></div>
+          class="absolute opacity-75 bg-amber-700 rounded-50 w-[130px] h-[130px] bottom-[48px] right-[-14px]"></div>
       </div>
       <div
         class="relative flex flex-col bg-blue-gray-900 border border-blue-gray-900 rounded-[10px] shadow-light-2xl">
@@ -144,14 +144,14 @@
           </a>
         </div>
         <div
-          class="absolute opacity-75 bg-fuchsia-700 rounded-[50px] w-[202px] h-[202px] bottom-[-24px] inset-x-0 mx-auto"></div>
-        <div class="absolute opacity-75 bg-green-700 rounded-[50px] w-[232px] h-[232px] top-[33px] right-[-43px]"></div>
+          class="absolute opacity-75 bg-fuchsia-700 rounded-50 w-[202px] h-[202px] bottom-[-24px] inset-x-0 mx-auto"></div>
+        <div class="absolute opacity-75 bg-green-700 rounded-50 w-[232px] h-[232px] top-[33px] right-[-43px]"></div>
       </div>
     </div>
   </div>
   <div class="px-4 md:px-20 py-8 md:py-[160px]">
     <div
-      class="flex flex-col gap-16 xl:gap-8 xl:flex-row items-center justify-between px-20 py-[73px] bg-white rounded-[30px] shadow-dark-xl">
+      class="flex flex-col gap-16 xl:gap-8 xl:flex-row items-center justify-between px-20 py-[73px] bg-white rounded-30 shadow-dark-xl">
       <div class="flex flex-col items-center xl:items-start gap-6 z-10">
         <div class="text-56 font-extrabold leading-[62px] text-center xl:text-left">Why join us</div>
         <ul class="tick-list text-xl">
@@ -164,18 +164,18 @@
       </div>
       <div class="flex items-center relative">
         <div id="hoverVideo"
-             class="relative flex flex-col bg-white w-[329px] h-[234px] xl:w-[520px] xl:h-[350px] rounded-[20px] border-white shadow-dark-2xl z-1 group hover:scale-150 transition-all duration-500">
+             class="relative flex flex-col bg-white w-[329px] h-[234px] xl:w-[520px] xl:h-[350px] rounded-20 border-white shadow-dark-2xl z-1 group hover:scale-150 transition-all duration-500">
           <div
-            class="flex flex-row gap-[5px] items-center p-4 bg-white rounded-t-[20px] h-[41px] z-1 group-hover:scale-130 origin-right">
+            class="flex flex-row gap-5px items-center p-4 bg-white rounded-t-20 h-[41px] z-1 group-hover:scale-130 origin-right">
             <div class="bg-rose-600 rounded-full w-2.5 h-2.5"></div>
             <div class="bg-amber-400 rounded-full w-2.5 h-2.5"></div>
             <div class="bg-green-500 rounded-full w-2.5 h-2.5"></div>
           </div>
           <div
-            class="flex justify-center items-center relative bg-white rounded-b-[20px] px-[5px] pb-[5px] group-hover:scale-130"
+            class="flex justify-center items-center relative bg-white rounded-b-20 px-5px pb-5px group-hover:scale-130"
             style="transform-origin: 100% 0">
             <video muted
-                   class="w-[329px] h-[193px] xl:w-[520px] xl:h-[309px] rounded-b-[20px] object-fill shadow-dark-2xl transition-all duration-500"
+                   class="w-[329px] h-[193px] xl:w-[520px] xl:h-[309px] rounded-b-20 object-fill shadow-dark-2xl transition-all duration-500"
                    src="../assets/videos/design_video.mp4">
             </video>
             <img src="../assets/icons/big-white-play.svg"
@@ -183,19 +183,19 @@
                  alt="big_play_icon">
           </div>
           <div
-            class="absolute w-[50px] h-[50px] xl:w-[85px] xl:h-[85px] opacity-75 bg-green-700 group-hover:opacity-0 group-hover:invisible transition-all duration-300 rounded-[50px] bottom-[-40px] left-[70px] z-2"></div>
+            class="absolute w-[50px] h-[50px] xl:w-[85px] xl:h-[85px] opacity-75 bg-green-700 group-hover:opacity-0 group-hover:invisible transition-all duration-300 rounded-50 bottom-[-40px] left-[70px] z-2"></div>
         </div>
         <div class="absolute w-[440px] h-[386px] xl:w-[713px] xl:h-[625px] left-[-75px]">
           <div
             class="absolute w-[411px] h-[135px] xl:w-[666px] xl:h-[218px] -rotate-45 left-[-20px] bottom-[205px] bg-amber-200"></div>
           <div
-            class="absolute w-[55px] h-[55px] xl:w-[90px] xl:h-[90px] opacity-75 bg-amber-700 rounded-[30px] left-[55px] top-[158px]"></div>
+            class="absolute w-[55px] h-[55px] xl:w-[90px] xl:h-[90px] opacity-75 bg-amber-700 rounded-30 left-[55px] top-[158px]"></div>
           <div
-            class="absolute w-[37px] h-[37px] xl:w-[60px] xl:h-[60px] opacity-75 bg-blue-light-700 rounded-[50px] right-[141px] top-[45px]"></div>
+            class="absolute w-[37px] h-[37px] xl:w-[60px] xl:h-[60px] opacity-75 bg-blue-light-700 rounded-50 right-[141px] top-[45px]"></div>
           <div
-            class="absolute w-[46px] h-[46px] xl:w-[74px] xl:h-[74px] opacity-75 bg-fuchsia-700 rounded-[30px] bottom-[98px] right-[181px]"></div>
+            class="absolute w-[46px] h-[46px] xl:w-[74px] xl:h-[74px] opacity-75 bg-fuchsia-700 rounded-30 bottom-[98px] right-[181px]"></div>
           <div
-            class="absolute w-[135px] h-[135px] xl:w-[218px] xl:h-[218px] opacity-75 bg-pink-700 rounded-[50px] bottom-[33px] right-0"></div>
+            class="absolute w-[135px] h-[135px] xl:w-[218px] xl:h-[218px] opacity-75 bg-pink-700 rounded-50 bottom-[33px] right-0"></div>
         </div>
       </div>
     </div>
@@ -218,88 +218,162 @@
       <div class="relative mx-10">
         <div class="absolute w-full bg-amber-200 h-[421px]"></div>
       </div>
-      <section class="splide z-2" aria-label="Splide Basic HTML Example">
-        <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide">
-              <div
-                class="flex flex-col bg-white p-8 border border-blue-gray-200 rounded-[20px] justify-between shadow-dark-l my-10 h-[430px]">
-                <div class="flex flex-row items-center gap-2 mt-4">
-                  <img src="../assets/images/zoomer_logo.svg" alt="company_logo">
-                  <div class="text-blue-gray-600 text-2xl font-bold">Zoomerr</div>
-                </div>
-                <div class="text-2xl">Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra turpis
-                  lorem. Varius a turpis urna id porttitor.
-                </div>
-                <div class="flex flex-row items-center gap-4">
-                  <img src="../assets/images/zoomer_profile.png">
-                  <div class="flex flex-col">
-                    <div class="text-lg">Hellen Jummy</div>
-                    <div class="text-blue-gray-600">Team Lead</div>
-                  </div>
+      <div class="swiper w-full max-h-[516px] h-[70px] 2xl:h-[unset]" id="brandSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="flex flex-col bg-white p-8 border border-blue-gray-200 rounded-20 justify-between shadow-dark-l my-10 h-[430px]">
+              <div class="flex flex-row items-center gap-2 mt-4">
+                <img src="../assets/images/zoomer_logo.svg" alt="company_logo">
+                <div class="text-blue-gray-600 text-2xl font-bold">Zoomerr</div>
+              </div>
+              <div class="text-2xl">Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra turpis
+                lorem. Varius a turpis urna id porttitor.
+              </div>
+              <div class="flex flex-row items-center gap-4">
+                <img src="../assets/images/zoomer_profile.png" alt="brand_profile">
+                <div class="flex flex-col">
+                  <div class="text-lg">Hellen Jummy</div>
+                  <div class="text-blue-gray-600">Team Lead</div>
                 </div>
               </div>
-            </li>
-            <li class="splide__slide">
-              <div
-                class="flex flex-col bg-white p-8 border border-blue-gray-200 rounded-[20px] justify-between shadow-dark-l my-10 h-[430px]">
-                <div class="flex flex-row items-center gap-2 mt-4">
-                  <img src="../assets/images/shells_logo.svg" alt="company_logo">
-                  <div class="text-blue-gray-600 text-2xl font-bold">SHELLS</div>
-                </div>
-                <div class="text-2xl">Aliquet ridiculus mi porta habitant vulputate rhoncus, mattis amet enim. Sit purus
-                  venenatis velit semper lectus sed ornare quam nulla.
-                </div>
-                <div class="flex flex-row items-center gap-4">
-                  <img src="../assets/images/shells_profile.png">
-                  <div class="flex flex-col">
-                    <div class="text-lg">Hellena John</div>
-                    <div class="text-blue-gray-600">Co-founder</div>
-                  </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="flex flex-col bg-white p-8 border border-blue-gray-200 rounded-20 justify-between shadow-dark-l my-10 h-[430px]">
+              <div class="flex flex-row items-center gap-2 mt-4">
+                <img src="../assets/images/shells_logo.svg" alt="company_logo">
+                <div class="text-blue-gray-600 text-2xl font-bold">SHELLS</div>
+              </div>
+              <div class="text-2xl">Aliquet ridiculus mi porta habitant vulputate rhoncus, mattis amet enim. Sit purus
+                venenatis velit semper lectus sed ornare quam nulla.
+              </div>
+              <div class="flex flex-row items-center gap-4">
+                <img src="../assets/images/shells_profile.png" alt="brand_profile">
+                <div class="flex flex-col">
+                  <div class="text-lg">Hellena John</div>
+                  <div class="text-blue-gray-600">Co-founder</div>
                 </div>
               </div>
-            </li>
-            <li class="splide__slide">
-              <div
-                class="flex flex-col bg-white p-8 border border-blue-gray-200 rounded-[20px] justify-between shadow-dark-l my-10 h-[430px]">
-                <div class="flex flex-row items-center gap-2 mt-4">
-                  <img src="../assets/images/artVenue_logo.svg" alt="company_logo">
-                  <div class="text-blue-gray-600 text-2xl font-bold">ArtVenue</div>
-                </div>
-                <div class="text-2xl">A eget sed posuere dui risus habitasse mauris. Venenatis aliquet id ultrices a
-                  lacus. Pretium vehicula pretium posuere justo sed.
-                </div>
-                <div class="flex flex-row items-center gap-4">
-                  <img src="../assets/images/artVenue_profile.png">
-                  <div class="flex flex-col">
-                    <div class="text-lg">David Oshodi</div>
-                    <div class="text-blue-gray-600">Manager</div>
-                  </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="flex flex-col bg-white p-8 border border-blue-gray-200 rounded-20 justify-between shadow-dark-l my-10 h-[430px]">
+              <div class="flex flex-row items-center gap-2 mt-4">
+                <img src="../assets/images/artVenue_logo.svg" alt="company_logo">
+                <div class="text-blue-gray-600 text-2xl font-bold">ArtVenue</div>
+              </div>
+              <div class="text-2xl">A eget sed posuere dui risus habitasse mauris. Venenatis aliquet id ultrices a
+                lacus. Pretium vehicula pretium posuere justo sed.
+              </div>
+              <div class="flex flex-row items-center gap-4">
+                <img src="../assets/images/artVenue_profile.png" alt="brand_profile">
+                <div class="flex flex-col">
+                  <div class="text-lg">David Oshodi</div>
+                  <div class="text-blue-gray-600">Manager</div>
                 </div>
               </div>
-            </li>
-            <li class="splide__slide">
-              <div
-                class="flex flex-col bg-white p-8 border border-blue-gray-200 rounded-[20px] justify-between shadow-dark-l my-10 h-[430px]">
-                <div class="flex flex-row items-center gap-2 mt-4">
-                  <img src="../assets/images/waves_logo.svg" alt="company_logo">
-                  <div class="text-blue-gray-600 text-2xl font-bold">WAVES</div>
-                </div>
-                <div class="text-2xl">Magna egestas aliquet ut integer non. Sed diam enim nibh sit. Aliquam laoreet
-                  aenean metus nibh eu scelerisque.
-                </div>
-                <div class="flex flex-row items-center gap-4">
-                  <img src="../assets/images/waves_profile.png">
-                  <div class="flex flex-col">
-                    <div class="text-lg">Charolette Hanlin</div>
-                    <div class="text-blue-gray-600">CEO</div>
-                  </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="flex flex-col bg-white p-8 border border-blue-gray-200 rounded-20 justify-between shadow-dark-l my-10 h-[430px]">
+              <div class="flex flex-row items-center gap-2 mt-4">
+                <img src="../assets/images/waves_logo.svg" alt="company_logo">
+                <div class="text-blue-gray-600 text-2xl font-bold">WAVES</div>
+              </div>
+              <div class="text-2xl">Magna egestas aliquet ut integer non. Sed diam enim nibh sit. Aliquam laoreet
+                aenean metus nibh eu scelerisque.
+              </div>
+              <div class="flex flex-row items-center gap-4">
+                <img src="../assets/images/waves_profile.png" alt="brand_profile">
+                <div class="flex flex-col">
+                  <div class="text-lg">Charolette Hanlin</div>
+                  <div class="text-blue-gray-600">CEO</div>
                 </div>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="flex flex-col bg-white p-8 border border-blue-gray-200 rounded-20 justify-between shadow-dark-l my-10 h-[430px]">
+              <div class="flex flex-row items-center gap-2 mt-4">
+                <img src="../assets/images/zoomer_logo.svg" alt="company_logo">
+                <div class="text-blue-gray-600 text-2xl font-bold">Zoomerr</div>
+              </div>
+              <div class="text-2xl">Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra turpis
+                lorem. Varius a turpis urna id porttitor.
+              </div>
+              <div class="flex flex-row items-center gap-4">
+                <img src="../assets/images/zoomer_profile.png" alt="brand_profile">
+                <div class="flex flex-col">
+                  <div class="text-lg">Hellen Jummy</div>
+                  <div class="text-blue-gray-600">Team Lead</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="flex flex-col bg-white p-8 border border-blue-gray-200 rounded-20 justify-between shadow-dark-l my-10 h-[430px]">
+              <div class="flex flex-row items-center gap-2 mt-4">
+                <img src="../assets/images/shells_logo.svg" alt="company_logo">
+                <div class="text-blue-gray-600 text-2xl font-bold">SHELLS</div>
+              </div>
+              <div class="text-2xl">Aliquet ridiculus mi porta habitant vulputate rhoncus, mattis amet enim. Sit purus
+                venenatis velit semper lectus sed ornare quam nulla.
+              </div>
+              <div class="flex flex-row items-center gap-4">
+                <img src="../assets/images/shells_profile.png" alt="brand_profile">
+                <div class="flex flex-col">
+                  <div class="text-lg">Hellena John</div>
+                  <div class="text-blue-gray-600">Co-founder</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="flex flex-col bg-white p-8 border border-blue-gray-200 rounded-20 justify-between shadow-dark-l my-10 h-[430px]">
+              <div class="flex flex-row items-center gap-2 mt-4">
+                <img src="../assets/images/artVenue_logo.svg" alt="company_logo">
+                <div class="text-blue-gray-600 text-2xl font-bold">ArtVenue</div>
+              </div>
+              <div class="text-2xl">A eget sed posuere dui risus habitasse mauris. Venenatis aliquet id ultrices a
+                lacus. Pretium vehicula pretium posuere justo sed.
+              </div>
+              <div class="flex flex-row items-center gap-4">
+                <img src="../assets/images/artVenue_profile.png" alt="brand_profile">
+                <div class="flex flex-col">
+                  <div class="text-lg">David Oshodi</div>
+                  <div class="text-blue-gray-600">Manager</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="flex flex-col bg-white p-8 border border-blue-gray-200 rounded-20 justify-between shadow-dark-l my-10 h-[430px]">
+              <div class="flex flex-row items-center gap-2 mt-4">
+                <img src="../assets/images/waves_logo.svg" alt="company_logo">
+                <div class="text-blue-gray-600 text-2xl font-bold">WAVES</div>
+              </div>
+              <div class="text-2xl">Magna egestas aliquet ut integer non. Sed diam enim nibh sit. Aliquam laoreet
+                aenean metus nibh eu scelerisque.
+              </div>
+              <div class="flex flex-row items-center gap-4">
+                <img src="../assets/images/waves_profile.png" alt="brand_profile">
+                <div class="flex flex-col">
+                  <div class="text-lg">Charolette Hanlin</div>
+                  <div class="text-blue-gray-600">CEO</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   </div>
   <div class="relative flex flex-col">
@@ -372,23 +446,23 @@
         <div
           class="mx-auto 2xl:mx-0 w-full relative flex flex-col flex-2 h-[556px] max-h-[556px]">
           <div
-            class="flex flex-col bg-white rounded-[20px] border-white shadow-dark-2xl z-1 left-0 2xl:w-4/5 w-10/12">
-            <div class="flex flex-row gap-[5px] items-center px-4 mt-4 bg-white rounded-t-[20px] z-1">
+            class="flex flex-col bg-white rounded-20 border-white shadow-dark-2xl z-1 left-0 2xl:w-4/5 w-10/12">
+            <div class="flex flex-row gap-5px items-center px-4 mt-4 bg-white rounded-t-20 z-1">
               <div class="bg-rose-600 rounded-full w-2.5 h-2.5"></div>
               <div class="bg-amber-400 rounded-full w-2.5 h-2.5"></div>
               <div class="bg-green-500 rounded-full w-2.5 h-2.5"></div>
             </div>
-            <img src="../assets/images/inner_pics_1.png" class="rounded-b-[20px] object-cover px-[5px] pb-[5px]"
+            <img src="../assets/images/inner_pics_1.png" class="rounded-b-20 object-cover px-5px pb-5px"
                  alt="inner_image_1">
           </div>
           <div
-            class="absolute 2xl:w-2/3 w-4/5 top-[105px] flex flex-col bg-white rounded-[20px] left-[15%] border-white shadow-dark-2xl z-1">
-            <div class="flex flex-row gap-[5px] items-center px-4 mt-4 bg-white rounded-t-[20px] z-1">
+            class="absolute 2xl:w-2/3 w-4/5 top-[105px] flex flex-col bg-white rounded-20 left-[15%] border-white shadow-dark-2xl z-1">
+            <div class="flex flex-row gap-5px items-center px-4 mt-4 bg-white rounded-t-20 z-1">
               <div class="bg-rose-600 rounded-full w-2.5 h-2.5"></div>
               <div class="bg-amber-400 rounded-full w-2.5 h-2.5"></div>
               <div class="bg-green-500 rounded-full w-2.5 h-2.5"></div>
             </div>
-            <img src="../assets/images/inner_pics_2.png" class="rounded-b-[20px] object-cover px-[5px] pb-[5px]"
+            <img src="../assets/images/inner_pics_2.png" class="rounded-b-20 object-cover px-5px pb-5px"
                  alt="inner_image_2">
           </div>
           <img class="absolute z-3 left-[65%] top-[178px] 2xl:w-1/4 w-2/5" src="../assets/images/inner_pics_3.png"
@@ -398,18 +472,18 @@
     </div>
   </div>
   <div class="flex items-center lg:justify-center bg-amber-900 h-full">
-    <div class="relative my-[42px] h-full w-full lg:w-fit overflow-x-hidden">
+    <div class="relative my-[42px] h-full w-full lg:w-fit">
       <div
         class="absolute inset-0 flex flex-col justify-center items-center gap-2 text-amber-50 font-extrabold select-none">
-        <div class="text-8xl" datasrc="11658467" id="shoesCount">0</div>
-        <div class="text-56">Shoes Collected</div>
+        <div class="text-5xl md:text-8xl" datasrc="11658467" id="shoesCount">0</div>
+        <div class="text-32 md:text-56">Shoes Collected</div>
       </div>
       <div class="absolute flex flex-col items-center justify-end top-[228px] left-[141px] z-2">
         <div class="hidden absolute w-[256px] bottom-[15px]">
           <img src="../assets/images/point_pic_1.png"
                class="absolute bottom-[24px] w-full h-[260px] object-fill z-1 select-none" alt="point_pic">
           <div class="relative flex flex-col items-center select-none">
-            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-[5px]">
+            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-5">
               Emma Simpson collected one pair <br/>of <span class="font-medium">Cool Shoes</span>.
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
@@ -430,7 +504,7 @@
           <img src="../assets/images/point_pic_1.png"
                class="absolute bottom-[24px] w-full h-[260px] object-fill z-1 select-none" alt="point_pic">
           <div class="relative flex flex-col items-center select-none">
-            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-[5px]">
+            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-5">
               Emma Simpson collected one pair <br/>of <span class="font-medium">Cool Shoes</span>.
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
@@ -448,7 +522,7 @@
           <img src="../assets/images/point_pic_1.png"
                class="absolute bottom-[24px] w-full h-[260px] object-fill z-1 select-none" alt="point_pic">
           <div class="relative flex flex-col items-center select-none">
-            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-[5px]">
+            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-5">
               Emma Simpson collected one pair <br/>of <span class="font-medium">Cool Shoes</span>.
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
@@ -469,7 +543,7 @@
           <img src="../assets/images/point_pic_1.png"
                class="absolute bottom-[24px] w-full h-[260px] object-fill z-1 select-none" alt="point_pic">
           <div class="relative flex flex-col items-center select-none">
-            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-[5px]">
+            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-5">
               Emma Simpson collected one pair <br/>of <span class="font-medium">Cool Shoes</span>.
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
@@ -487,7 +561,7 @@
           <img src="../assets/images/point_pic_1.png"
                class="absolute bottom-[24px] w-full h-[260px] object-fill z-1 select-none" alt="point_pic">
           <div class="relative flex flex-col items-center select-none">
-            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-[5px]">
+            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-5">
               Emma Simpson collected one pair <br/>of <span class="font-medium">Cool Shoes</span>.
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
@@ -505,7 +579,7 @@
           <img src="../assets/images/point_pic_1.png"
                class="absolute bottom-[24px] w-full h-[260px] object-fill z-1 select-none" alt="point_pic">
           <div class="relative flex flex-col items-center select-none">
-            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-[5px]">
+            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-5">
               Emma Simpson collected one pair <br/>of <span class="font-medium">Cool Shoes</span>.
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
@@ -523,7 +597,7 @@
           <img src="../assets/images/point_pic_1.png"
                class="absolute bottom-[24px] w-full h-[260px] object-fill z-1 select-none" alt="point_pic">
           <div class="relative flex flex-col items-center select-none">
-            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-[5px]">
+            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-5">
               Emma Simpson collected one pair <br/>of <span class="font-medium">Cool Shoes</span>.
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
@@ -541,7 +615,7 @@
           <img src="../assets/images/point_pic_1.png"
                class="absolute bottom-[24px] w-full h-[260px] object-fill z-1 select-none" alt="point_pic">
           <div class="relative flex flex-col items-center select-none">
-            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-[5px]">
+            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-5">
               Emma Simpson collected one pair <br/>of <span class="font-medium">Cool Shoes</span>.
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
@@ -559,7 +633,7 @@
           <img src="../assets/images/point_pic_1.png"
                class="absolute bottom-[24px] w-full h-[260px] object-fill z-1 select-none" alt="point_pic">
           <div class="relative flex flex-col items-center select-none">
-            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-[5px]">
+            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-5">
               Emma Simpson collected one pair <br/>of <span class="font-medium">Cool Shoes</span>.
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
@@ -577,7 +651,7 @@
           <img src="../assets/images/point_pic_1.png"
                class="absolute bottom-[24px] w-full h-[260px] object-fill z-1 select-none" alt="point_pic">
           <div class="relative flex flex-col items-center select-none">
-            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-[5px]">
+            <div class="bg-blue-gray-200 text-sm px-4 pt-4 pb-2 rounded-5">
               Emma Simpson collected one pair <br/>of <span class="font-medium">Cool Shoes</span>.
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
@@ -590,8 +664,11 @@
           <circle cx="12" cy="12" r="10.5" stroke="#A3E635" stroke-width="3"/>
         </svg>
       </div> <!-- 24 24 -->
-      <img src="../assets/images/map.svg" class="select-none object-cover min-w-[1048px] min-h-[633px]"
-           alt="map">
+      <div class="overflow-hidden">
+        <img src="../assets/images/map.svg" class="select-none object-cover min-w-[1048px] min-h-[633px]"
+             alt="map">
+      </div>
+
     </div>
   </div>
   <div class="footer flex flex-col text-white bg-blue-gray-900 px-4 md:px-20">
@@ -664,46 +741,45 @@
   </div>
 </div>
 </body>
-<script src="../js/splide/js/splide.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="../thirdParty/swiper-bundle.min.js"></script>
 <script>
-
-    // HAMBURGER MENU
+    //region HAMBURGER MENU
     function hamburgerMenuHandler() {
         const menu = document.getElementById('hamburgerMenu')
-        if (menu.classList.contains('translate-x-full')){
-            menu.classList.replace('translate-x-full','translate-x-0');
+        if (menu.classList.contains('translate-x-full')) {
+            menu.classList.replace('translate-x-full', 'translate-x-0');
+            document.body.style.overflowY = 'hidden';
         } else {
-            menu.classList.replace('translate-x-0','translate-x-full');
+            menu.classList.replace('translate-x-0', 'translate-x-full');
+            document.body.style.overflowY = 'unset'
         }
     }
 
-    // SLIDER
-    document.addEventListener('DOMContentLoaded', function () {
-        let splide = new Splide('.splide', {
-            arrows: false,
-            type: 'loop',
-            perPage: 3.5,
+    //endregion
 
+    //region SLIDER
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('#brandSwiper', {
+            loop: true,
+            slidesPerView: 3.5,
+            loopPreventsSliding: false,
+            navigation: {
+                nextEl: '#btnNext',
+                prevEl: '#btnPrev',
+            },
             breakpoints: {
                 1024: {
-                    perPage: 2.5,
+                    slidesPerView: 2.5,
                 },
                 767: {
-                    perPage: 1.5,
+                    slidesPerView: 1.5,
                 },
             },
-            focus: 'center',
+            centeredSlides: true,
             speed: 1500,
-            gap: 24,
+            spaceBetween: 24,
         });
-        splide.mount();
-        document.getElementById('btnNext').addEventListener('click', e => {
-            splide.go('+3');
-        })
-        document.getElementById('btnPrev').addEventListener('click', e => {
-            splide.go('-3');
-        })
+        swiper.init();
     });
     document.addEventListener('DOMContentLoaded', function () {
         const count = document.getElementById('buttonSwiper').getElementsByTagName('button').length;
@@ -731,10 +807,11 @@
         });
         swiper.init();
     });
+    //endregion
 
-    // COUNTER
+    //region COUNTER
     const shoesCounter = document.getElementById('shoesCount')
-    const speed = 1000;
+    const speed = 800;
 
     const animate = () => {
         const value = +shoesCounter.getAttribute('datasrc');
@@ -748,15 +825,18 @@
             shoesCounter.innerText = value.toLocaleString(undefined).replaceAll(".", ",");
         }
     }
-    window.addEventListener("scroll", (event) => {
-        const shoesCounter = document.getElementById('shoesCount')
-        const a = shoesCounter.getBoundingClientRect().top;
-        if (a < 650) {
+    window.addEventListener("scroll", () => {
+        const shoesCounter = document.getElementById('shoesCount');
+        const height = window.innerHeight;
+        const topDistance = shoesCounter.getBoundingClientRect().top;
+        // DECREASING 650 MEANS ANIMATE COUNTER EARLIER
+        if (topDistance < (height * 650) / 875) {
             animate();
         }
     });
+    //endregion
 
-    // MAP POINT
+    //region MAP POINT
     let currentActiveMapPoint;
 
     const mapPoints = document.getElementsByClassName('mapPoint')
@@ -764,8 +844,6 @@
     for (const mapPoint of mapPoints) {
         mapPoint.addEventListener('click', mapPointHandler);
     }
-
-    // document.addEventListener('click', outerClick)
 
     function outerClick(event) {
         if (currentActiveMapPoint) {
@@ -810,7 +888,9 @@
         }
     }
 
-    // VIDEO HOVER
+    //endregion
+
+    //region VIDEO HOVER
     const videoHoverElement = document.getElementById('hoverVideo')
 
     function playVideo(event) {
@@ -823,8 +903,8 @@
         video.currentTime = 0;
     }
 
-
     videoHoverElement.addEventListener('mouseenter', playVideo)
     videoHoverElement.addEventListener('mouseleave', stopVideo)
+    //endregion
 </script>
 </html>

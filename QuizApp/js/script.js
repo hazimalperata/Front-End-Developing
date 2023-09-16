@@ -4,19 +4,20 @@ async function getQuestions() {
         const response = await fetch(`https://opentdb.com/api.php?amount=${(QUESTION_COUNT)}&type=multiple`);
         return await response.json();
     } catch (error) {
-        console.error("Soruları çekerken bir hata oluştu: ", error);
+        alert(`An error occurred while taking the questions: ${error}`);
+        location.reload();
     }
 }
 
 const response = getQuestions();
 window.addEventListener("load", (event) => {
-    let currentQuestion;
-    let questions = [];
-    let currentQuestionIndex = -1;
-    let countdownTimer;
     const secondsPerQuestion = 30;
     const secondsPerRead = 10;
     const choiceOptions = ['a', 'b', 'c', 'd'];
+    let currentQuestionIndex = -1;
+    let currentQuestion;
+    let questions = [];
+    let countdownTimer;
     const userAnswers = []
     const startButton = document.getElementById('start_button');
     const choiceButtonElements = choiceOptions.map(item => document.getElementById(`option_${item}`));
@@ -27,15 +28,7 @@ window.addEventListener("load", (event) => {
     const tableContainer = document.getElementById('table_container');
     const answerTable = document.getElementById('answer_table');
     const startContainer = document.getElementById('start_container');
-    // const radioInputs = document.getElementsByTagName('input')
-    //
-    // for (const radioInput of radioInputs) {
-    //     radioInput.addEventListener('click', e => {
-    //         if (e.target.checked) {
-    //
-    //         }
-    //     })
-    // }
+    const spinner = document.getElementById('spinner');
 
     response.then(e => {
         if (e.response_code === 0) {
@@ -47,8 +40,10 @@ window.addEventListener("load", (event) => {
                 }]
             }
             startButton.disabled = false;
+            spinner.classList.add('hidden');
+            startButton.classList.remove('hidden');
         } else {
-            alert('Sorular düzgün çekilemedi, sayfa yenileniyor');
+            alert('Questions could not be drawn properly, the page is being refreshed');
             location.reload();
         }
     });
@@ -104,7 +99,7 @@ window.addEventListener("load", (event) => {
             startTimer();
 
             if (currentQuestionIndex === questions.length - 1) {
-                nextQuestionButtonElement.innerText = 'Quizi Bitir';
+                nextQuestionButtonElement.innerText = 'Save and Finish The Quiz';
             }
 
             return questions[currentQuestionIndex];
@@ -122,7 +117,7 @@ window.addEventListener("load", (event) => {
         userAnswers.map((item, index) => {
             const trElement = document.createElement('tr');
             trElement.innerHTML = `<td>${index + 1}) ${questions[index].question}</td>
-        <td>${item.text ? item.text : "Boş Bırakıldı"}</td>
+        <td>${item.text ? item.text : "Empty"}</td>
         <td>${item.correct}</td>
         <td><div class="square mx-auto ${item.isCorrect === null ? 'empty' : item.isCorrect ? 'correct' : 'wrong'}"></div></td>`;
             answerTable.appendChild(trElement);
@@ -139,20 +134,19 @@ window.addEventListener("load", (event) => {
             item.disabled = true;
             item.checked = false;
         });
-        remainingTimeElement.innerHTML = 'Süre Doldu !';
+        remainingTimeElement.innerHTML = 'Times Up !';
         setTimeout(() => {
             applyChoice();
-            //     Berkant Beyin Istegi Uzerine 2 Saniyeye Dusuruldu
         }, 2000);
     }
 
     function startTimer() {
         let remaining_seconds = secondsPerQuestion;
         remainingLineElement.classList.add('remainingLine')
-        remainingTimeElement.innerHTML = `Kalan süre: ${remaining_seconds} saniye`
+        remainingTimeElement.innerHTML = `Remaining Time: ${remaining_seconds} seconds`
         countdownTimer = setInterval(() => {
             remaining_seconds -= 1;
-            remainingTimeElement.innerHTML = `Kalan süre: ${remaining_seconds} saniye`
+            remainingTimeElement.innerHTML = `Remaining Time: ${remaining_seconds} seconds`
             if (remaining_seconds <= secondsPerQuestion - secondsPerRead) {
                 nextQuestionButtonElement.disabled = false;
             }
@@ -172,18 +166,18 @@ window.addEventListener("load", (event) => {
         document.getElementById('answer_d').innerHTML = `${answers[3].text}`
     }
 
+    function startQuiz() {
+        startContainer.remove();
+        currentQuestion = nextQuestion();
+        questionContainer.classList.remove('hidden');
+    }
+
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
         return array;
-    }
-
-    function startQuiz() {
-        startContainer.remove();
-        currentQuestion = nextQuestion();
-        questionContainer.classList.remove('hidden');
     }
 
 });

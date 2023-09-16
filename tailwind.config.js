@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ['./src/**/*.{html,js}',
+    content: ['./pages/**/*.{html,js}',
         '../**/**/*.{html,js}'],
     theme: {
         extend: {
@@ -22,6 +22,18 @@ module.exports = {
             fontSize: {
                 '32': '32px',
                 '56': '56px',
+            },
+            borderRadius: {
+                '5': '5px',
+                '20': '20px',
+                '30': '30px',
+                '50': '50px'
+            },
+            padding: {
+                '5px': '5px'
+            },
+            gap: {
+                '5px': '5px'
             },
             zIndex: {
                 '1': '1',

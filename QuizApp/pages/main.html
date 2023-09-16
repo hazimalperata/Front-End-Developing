@@ -10,11 +10,11 @@
 <div class="flex items-center justify-center w-screen h-screen bg-blue-300">
   <div id="start_container" class="flex flex-col gap-8 bg-white p-5 rounded-md">
     <div class="text-3xl">Quiz App</div>
-    <div>Toplamda 10 soru ve soru başına 30 saniye süreniz vardır. Soru yüklendikten sonra ki 10 saniye boyunca soruyu
-      cevaplayamassınız.
+    <div>You have 10 questions in total and 30 seconds per question. You cannot answer the question for 10 seconds after the question is loaded.
     </div>
+    <div id="spinner" class="mx-auto bg-blue-300 rounded-lg"></div>
     <button disabled
-            class="nextButton" id="start_button">Başla
+            class="nextButton hidden" id="start_button">Start the Quiz
     </button>
   </div>
   <div id="question_container" class="flex flex-col gap-5 bg-white rounded-md p-5 hidden">
@@ -43,7 +43,7 @@
         </div>
       </div>
       <button disabled id="next_button" class="nextButton">
-        Sonraki Soru
+        Save and Pass Next Question
       </button>
       <div class="flex flex-col gap-1">
         <div id="remaining_time">
@@ -53,13 +53,13 @@
     </div>
   </div>
   <div id="table_container" class="flex flex-col gap-5 hidden">
-    <div class="text-white text-3xl mx-auto">Cevaplarınız</div>
+    <div class="text-white text-3xl mx-auto">Your Answers</div>
     <table id="answer_table">
       <tr>
-        <th>Soru</th>
-        <th>Cevabınız</th>
-        <th>Doğru Cevap</th>
-        <th>Durum</th>
+        <th>Question</th>
+        <th>Your Answer</th>
+        <th>Correct Answer</th>
+        <th>Status</th>
       </tr>
     </table>
   </div>
