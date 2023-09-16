@@ -36,11 +36,16 @@ The aim was creating a script that has acceptable efficiency and performance. Al
 
 ### Business Choice
 
-The answer does **NOT** save automatically when times up. When user clicked the option, needs to click button for saving the answer.
+The answer does **NOT** save automatically when times up. When user clicked an option, needs to click button for saving the answer.
 
 ### Used Library
 ```bash
   Just by JS :)
+```
+### Fetching
+For fetching questions used [**TriviaApi**](https://opentdb.com/). It has many settings but in this case set just question counts. Url: 
+```bash
+  https://opentdb.com/api.php?amount=10
 ```
 
 ### File Structure
@@ -51,5 +56,3 @@ Tried to keep simple and effective
   |- pages    # html files
   |- style    # style files: input.css and output.css
 ```
-
-
